@@ -1,0 +1,32 @@
+<map>
+	<entry>
+		<int>0</int>
+		<ItemDef>
+			<name>Coins</name>
+			<stackable>true</stackable>
+			<equipable>NOT_EQUIPABLE</equipable>
+			<edible>0</edible>
+			<description>They are some shiny coins, maybe I should spend them...</description>
+		</ItemDef>
+	</entry>
+	<entry>
+		<int>1</int>
+		<ItemDef>
+			<name>Hat</name>
+			<stackable>false</stackable>
+			<equipable>HEAD</equipable>
+			<edible>0</edible>
+			<description>A stupid graduation hat.</description>
+		</ItemDef>
+	</entry>
+	<entry>
+		<int>2</int>
+		<ItemDef>
+			<name>Pizza</name>
+			<stackable>false</stackable>
+			<equipable>NOT_EQUIPABLE</equipable>
+			<edible>10</edible>
+			<description>A slice of pizza.</description>
+		</ItemDef>
+	</entry>
+</map>

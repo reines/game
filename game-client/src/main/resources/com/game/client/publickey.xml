@@ -1,0 +1,8 @@
+<sun.security.rsa.RSAPublicKeyImpl resolves-to="java.security.KeyRep">
+  <type>PUBLIC</type>
+  <algorithm>RSA</algorithm>
+  <format>X.509</format>
+  <encoded>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCW1MESahUOeYmZ5fqMrRFPEHtHjyvpxrBVJS6W
++Uc1PCueOwXHtjXCffZPXSuWkX2IdS4f9orSQesm0Lrh7ZzA9IvEUEjxJe0YTKqV+PrU4pKwMIEi
+RdBmZ76Drz80ZFYMeSQStd2I6ku9N/ytD2h0z1X5kPgbihCnJ+2FETZyNQIDAQAB</encoded>
+</sun.security.rsa.RSAPublicKeyImpl>

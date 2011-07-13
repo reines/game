@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.game.common.model" default-access="field" default-lazy="false">
+	<class name="PlayerProfile" table="players">
+		<composite-id name="id">
+			<key-property name="hex" column="id" />
+		</composite-id>
+
+		<component name="password">
+			<property name="hex" column="password" />
+		</component>
+
+		<property name="username" />
+
+		<component name="location">
+			<property name="x" />
+			<property name="y" />
+		</component>
+
+		<component name="inventory">
+			<list name="items" table="items">
+				<key column="player_id" />
+				<list-index column="position" />
+				<composite-element class="Item">
+					<property name="ID" column="item_id" access="property" />
+					<property name="amount" />
+					<property name="equiped" />
+				</composite-element>
+			</list>
+		</component>
+
+		<component name="stats">
+			<list name="stats" table="stats">
+				<key column="player_id" />
+				<index column="stat_id" />
+				<composite-element class="Stat">
+					<property name="exp" access="property" />
+					<property name="current" />
+				</composite-element>
+			</list>
+		</component>
+
+		<component name="friends">
+			<map name="friends" table="friends">
+				<key column="player_id" />
+				<!-- friend_key and friend_id are duplicate data - hibernate won't allow referencing the same column twice... -->
+				<composite-map-key class="Hash">
+					<key-property name="hex" column="friend_key" />
+				</composite-map-key>
+				<composite-element class="Friend">
+					<nested-composite-element name="id" class="Hash">
+						<property name="hex" column="friend_id" />
+					</nested-composite-element>
+
+					<property name="username" column="friend_username" />
+				</composite-element>
+			</map>
+		</component>
+
+		<component name="registered">
+			<property name="time" column="registered" access="property" />
+		</component>
+		<component name="lastSession">
+			<property name="time" column="last_session" access="property" />
+		</component>
+	</class>
+
+	<class name="Friend" table="players">
+		<composite-id name="id">
+			<key-property name="hex" column="id" />
+		</composite-id>
+
+		<property name="username" />
+	</class>
+</hibernate-mapping>

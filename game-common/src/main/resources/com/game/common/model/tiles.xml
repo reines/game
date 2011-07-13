@@ -1,0 +1,30 @@
+<map>
+	<!-- water -->
+	<entry>
+		<byte>0</byte>
+		<TileDef>
+			<walkable>false</walkable>
+		</TileDef>
+	</entry>
+	<!-- grass -->
+	<entry>
+		<byte>1</byte>
+		<TileDef>
+			<walkable>true</walkable>
+		</TileDef>
+	</entry>
+	<!-- dirt -->
+	<entry>
+		<byte>2</byte>
+		<TileDef>
+			<walkable>true</walkable>
+		</TileDef>
+	</entry>
+	<!-- tile -->
+	<entry>
+		<byte>3</byte>
+		<TileDef>
+			<walkable>true</walkable>
+		</TileDef>
+	</entry>
+</map>
