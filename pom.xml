@@ -18,12 +18,11 @@
     <module>game-tools</module>
   </modules>
 
-<!--
   <scm>
-    <connection>scm:git:git@github.com:reines/odnetwork.git</connection>
-    <url>https://github.com/reines/odnetwork</url>
+    <url>https://github.com/reines/game</url>
+    <connection>scm:git:git://github.com/reines/game.git</connection>
+    <developerConnection>scm:git:git@github.com:reines/game.git</developerConnection>
   </scm>
--->
 
   <dependencies>
     <dependency>
